@@ -3,7 +3,20 @@ import List from './List'
 import Alert from './Alert'
 
 function App() {
-  return <h2>grocery bud setup</h2>
+  const [name, setName]=useState("");
+  const [list, setList] = useState([]);
+  const [isEditing, setIsEditing] = useState([false]);
+  const [editId,setEditId]=useState(null)
+  const [alert,setAlert]=useState({show:false, msg:"",type:""});
+
+  const handleSubmit =(e)=>{
+    e.preventDefault();
+    console.log("hello");
+  }
+
+  return <section className="section-center">
+    <form className="groceryForm"></form>
+  </section>
 }
 
 export default App
